@@ -32,19 +32,19 @@ const ExpenseForm = () => {
 
 	const dateChangeHandler = (e) => {
 		setUserInput((prevState) => {
-			return { ...prevState, date: new Date(e.target.value) };
+			return { ...prevState, date: e.target.value };
 		});
-    
-    setUserInput({ 
-      title: '',
-      amount: '',
-      date: ''
-    })
 	};
 
 	const submitHandler = (e) => {
 		e.preventDefault();
 		console.log(userInput);
+
+    setUserInput({ 
+      title: '',
+      amount: '',
+      date: ''
+    })
 	};
 	return (
 		<form onSubmit={submitHandler}>
