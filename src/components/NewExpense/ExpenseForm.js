@@ -34,6 +34,12 @@ const ExpenseForm = () => {
 		setUserInput((prevState) => {
 			return { ...prevState, date: new Date(e.target.value) };
 		});
+    
+    setUserInput({ 
+      title: '',
+      amount: '',
+      date: ''
+    })
 	};
 
 	const submitHandler = (e) => {
