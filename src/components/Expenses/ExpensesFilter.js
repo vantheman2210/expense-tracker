@@ -9,6 +9,7 @@ const ExpensesFilter = (props) => {
 		console.log(e.target.value);
 		props.getFilterYear(e.target.value);
 	};
+	
 	return (
 		<div className="expenses-filter">
 			<div className="expenses-filter__control">
