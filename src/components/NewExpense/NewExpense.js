@@ -16,8 +16,6 @@ const NewExpense = (props) => {
 
   const addExpenseHandler = () => {
     !addExpense ? setAddExpense(true) : setAddExpense(false);
-    console.log("click");
-    console.log(addExpense);
   };
 
   if (!addExpense) {
@@ -30,7 +28,10 @@ const NewExpense = (props) => {
 
   return (
     <div className="new-expense">
-      <ExpenseForm onSaveExpenseData={saveExpenseData} />
+      <ExpenseForm
+        onSaveExpenseData={saveExpenseData}
+        onCancel={addExpenseHandler}
+      />
     </div>
   );
 };
